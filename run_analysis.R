@@ -35,7 +35,6 @@ xNames$V2 <- as.character(xNames$V2);
 
 # Do some regexps to make sure the column names are safe to use in any R script:
 
-xNames$V2 = gsub("^t", "t.", xNames$V2, perl=T);
 xNames$V2 = gsub("-", "_", xNames$V2, perl=T);
 xNames$V2 = gsub(",", "_", xNames$V2, perl=T);
 xNames$V2 = gsub("\\(", "", xNames$V2, perl=T);
@@ -65,5 +64,9 @@ names(output) = paste("mean.",names(output),sep="")
 names(output)[1] = "subject";
 names(output)[2] = "activity";
 
+# Save to files:
+
 write.csv(output, "../output.csv");
 write.table(output, "../output.txt", row.names=F);
+
+setwd('..');
