@@ -41,11 +41,20 @@ Column names are named accordingly to the following scheme:
 * Finally, some of the columns relate to particular axis of a gyroscope output. These will have X Y or Z at the end
 ** Example: mean.t.BodyAccJerk_mean_Z, mean.t.BodyGyroJerk_std_X, mean.fBodyGyro_meanFreq_Y
 
-## Variables type and range
+## Variables types, units and ranges
 
 Column1 - subject is a ID of type integer; Range = [1;30] (30 subjects total)
 Column2 - activity is a label of type character; Range = [LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS]
 Column3 to Column 81 - are type of numeric in a range of [-1;1];
+
+Signals in columns 3 - 81 are expressed as one of the following:
+* means of means the body linear acceleration and angular velocityor;
+* means of standard deciation of the body linear acceleration and angular velocity; 
+
+in m/s^2.
+
+They were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 ## Full list of columns with meaning, types and ranges:
 
